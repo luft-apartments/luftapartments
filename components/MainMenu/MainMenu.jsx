@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './MainMenu.module.scss';
+import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import { usePathname } from 'next/navigation';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -147,17 +148,9 @@ export const MainMenu = ({ items, logo, boldText, regularText }) => {
               </div>
             )
           })}
-          {/* <div className={styles.icons}>
-            {(icons || []).map((icon) => (
-              <Link
-                key={icon.id}
-                href={icon.destination}
-                target='_blank'
-                className={styles.iconLink}
-                dangerouslySetInnerHTML={{ __html: icon.label }}
-              />
-            ))}
-          </div> */}
+          <div className={styles.lang}>
+            <LanguageDropdown />
+          </div>
         </nav>
         <div
           className={`${styles.burgerMenu} ${isNavVisible ? styles.open : ''}`}

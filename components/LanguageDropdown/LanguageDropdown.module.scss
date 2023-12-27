@@ -1,0 +1,94 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 25px;
+  // padding-right: 10px;
+
+  // @media screen and (max-width: 768px) {
+  //   padding-right: 0;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 25px;
+  //   transform: translateY(-50%);
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 3px solid #f9f9f9;
+  //   border-left: 3px solid transparent;
+  //   border-right: 3px solid transparent;
+  // }
+}
+
+.dropdownToggle {
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #f9f9f9;
+  width: 20px;
+  height: 20px;
+}
+
+.dropdownToggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dropdownMenu {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none; /* Disable pointer events when the dropdown is not visible */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  // background-color: #fff;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // border-radius: 4px;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &.dropdownVisible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable pointer events when the dropdown is visible */
+  }
+}
+
+
+.dropdownTransition {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dropdownVisible {
+  display: block;
+}
+
+.dropdownItem {
+  padding-top: 10px;
+  cursor: pointer;
+  color: #f9f9f9;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  line-height: 0;
+
+  &:hover {
+    color: #ffa800;
+  }
+}
+
+// .dropdown:hover .dropdownMenu {
+//   display: block;
+// }
+
+.dropdownScrolled {
+  // Add styles for the scrolled state
+  // background-color: #031f35;
+
+  // You can customize other styles for the scrolled state here
+}
